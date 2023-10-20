@@ -1,0 +1,13 @@
+@font-face {
+  font-family: YoungSerif;
+  src: url("YoungSerif-Regular.ttf");
+}
+
+body {
+  background-color: #313131;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
