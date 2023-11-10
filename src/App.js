@@ -1,15 +1,17 @@
 import { Toaster } from 'react-hot-toast';
 import './App.css';
-import AppNavbar from './components/AppNavbar';
-import  LoginView from './views/LoginView';
 import { Fragment, useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import HomeView from './views/HomeView';
-import RegisterView from './views/RegisterView';
 import { LoginContext } from './context/LoginContext';
-import AuthorizedView from './views/AuthorizedView';
-import StationsView from './views/StationsView';
-import LogoutView from './views/LogoutView';
+import Home from './components/Home/Home.component';
+import Login from './components/Login/Login.component';
+import Register from './components/Register/Register.component';
+import Stations from './components/Stations/Stations.component';
+import Authorized from './common/Authorized.component';
+import Station from './components/Station/Station.component';
+import Logout from './components/Logout/Logoutcomponent';
+import AppNavbar from './components/AppNavbar/AppNavbar.component';
+
 
 function App() {
   const [token, setToken] = useState(localStorage.getItem("token"))
@@ -22,12 +24,13 @@ function App() {
           <AppNavbar />
 
           <Routes>
-            <Route path='/' element={<HomeView />} />
-            <Route path='/login' element={<LoginView />} />
-            <Route path='/register' element={<RegisterView />} />
+            <Route path='/' element={<Home />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/register' element={<Register />} />
             
-            <Route path='/stations' element={<AuthorizedView><StationsView /></AuthorizedView>} />
-            <Route path='/logout' element={<AuthorizedView><LogoutView /></AuthorizedView>} />
+            <Route path='/stations' element={<Authorized><Stations /></Authorized>} />
+            <Route path='/stations/:id' element={<Authorized><Station /></Authorized>} />
+            <Route path='/logout' element={<Authorized><Logout /></Authorized>} />
           </Routes>
         </LoginContext.Provider>
 

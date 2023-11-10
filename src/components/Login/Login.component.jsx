@@ -1,14 +1,13 @@
 // eslint-disable-next-line
-import Logo from '../components/Logo';
 import { useContext, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import toast from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom';
-import { post } from '../api/requests';
-import { ENDPOINTS } from '../api/urls';
-import { LoginContext } from '../context/LoginContext';
+import { post } from '../../api/requests';
+import { ENDPOINTS } from '../../api/urls';
+import { LoginContext } from '../../context/LoginContext';
 
-function LoginView() {
+function Login() {
     const navigate = useNavigate()
     const [komunikat, setKomunikat] = useState("<pusty>")
     const [username, setUsername] = useState("")
@@ -65,4 +64,4 @@ function LoginView() {
     );
 }
 
-export default LoginView;
+export default Login;

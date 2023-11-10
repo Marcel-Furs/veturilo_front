@@ -1,11 +1,11 @@
 import { useState } from "react";
 import toast from 'react-hot-toast'
 import { useNavigate } from "react-router-dom";
-import { post } from "../api/requests";
-import {ENDPOINTS} from "../api/urls"
-import "../Register.css"
+import { post } from "../../api/requests";
+import {ENDPOINTS} from "../../api/urls"
+import "./Register.component.css"
 
-function RegisterView() {
+function Register() {
     const navigate = useNavigate()
     const [username, setUsername] = useState("")
     const [password1, setPassword1] = useState("")
@@ -60,4 +60,4 @@ function RegisterView() {
     );
 }
 
-export default RegisterView;
+export default Register;

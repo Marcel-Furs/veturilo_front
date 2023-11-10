@@ -1,8 +1,8 @@
 import { useContext, useEffect } from "react";
-import { LoginContext } from "../context/LoginContext";
+import { LoginContext } from "../../context/LoginContext";
 import { useNavigate } from "react-router-dom";
 
-function LogoutView() {
+function Logout() {
     const [token, setToken] = useContext(LoginContext)
     const navigate = useNavigate()
 
@@ -13,4 +13,4 @@ function LogoutView() {
     })
 }
 
-export default LogoutView;
+export default Logout;

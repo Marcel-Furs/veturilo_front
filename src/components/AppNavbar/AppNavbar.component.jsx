@@ -5,7 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 import { Fragment, useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { LoginContext } from '../context/LoginContext';
+import { LoginContext } from '../../context/LoginContext';
 
 
 function AppNavbar() {
